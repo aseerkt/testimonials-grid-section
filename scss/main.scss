@@ -41,6 +41,7 @@ body {
       }
       box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.2);
       .person-header {
+        z-index: 2;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -54,18 +55,23 @@ body {
 
         .person-info {
           h2 {
+            z-index: 2;
             font-size: 1.3em;
           }
           p {
+            z-index: 2;
+            opacity: 0.7;
             font-size: 0.98em;
           }
         }
       }
       .content-header {
+        z-index: 2;
         font-size: 1.4em;
         margin-bottom: 1em;
       }
       .content-desc {
+        z-index: 2;
         font-size: 1.1em;
       }
     }
@@ -73,6 +79,13 @@ body {
       color: #fff;
     }
     #daniel {
+      position: relative;
+      .floating-quotation {
+        position: absolute;
+        right: 3em;
+        top: 0;
+        z-index: 0;
+      }
       background-color: $moderate-violet;
       grid-area: daniel;
     }
